@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>EasyBuy</display-name>
+  
+  <listener>
+    <listener-class>action.ProjectListenter</listener-class>
+  </listener>
+  
+  <!-- 
+  <listener>
+    <listener-class>com.action.SesListenter</listener-class>
+  </listener>
+   -->
+   
+  <filter>
+    <filter-name>test</filter-name>
+    <filter-class>action.TestFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>test</filter-name>
+    <url-pattern>/page/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+      <filter-name>code</filter-name>
+      <filter-class>action.CodeFilter</filter-class>
+      <init-param>
+        <param-name>codestr</param-name>
+        <param-value>UTF-8</param-value>
+      </init-param>
+  </filter>
+  
+  <filter-mapping>
+     <filter-name>code</filter-name>
+     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>roln</filter-name>
+    <filter-class>action.SessionFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>roln</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>IndexAction</servlet-name>
+    <servlet-class>action.IndexAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OneProduct</servlet-name>
+    <servlet-class>action.OneProduct</servlet-class>
+  </servlet>
+
+  <servlet>
+     <servlet-name>image</servlet-name>
+     <servlet-class>action.ImageAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginAction</servlet-name>
+    <servlet-class>action.LoginAction</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterAction</servlet-name>
+    <servlet-class>action.RegisterAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Guestbook</servlet-name>
+    <servlet-class>action.Guestbook</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Addguest</servlet-name>
+    <servlet-class>action.Addguest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddShop</servlet-name>
+    <servlet-class>action.AddShop</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShopAction</servlet-name>
+    <servlet-class>action.ShopAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddOrder</servlet-name>
+    <servlet-class>action.AddOrder</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckAction</servlet-name>
+    <servlet-class>action.CheckAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CateAction</servlet-name>
+    <servlet-class>action.CateAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxAction</servlet-name>
+    <servlet-class>action.AjaxAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelShop</servlet-name>
+    <servlet-class>action.DelShop</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxOne</servlet-name>
+    <servlet-class>action.AjaxOne</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AjaxShow</servlet-name>
+    <servlet-class>action.AjaxShow</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  <servlet-mapping>
+      <servlet-name>image</servlet-name>
+      <url-pattern>/ImageAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginAction</servlet-name>
+    <url-pattern>/LoginAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterAction</servlet-name>
+    <url-pattern>/RegisterAction</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>IndexAction</servlet-name>
+    <url-pattern>/IndexAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OneProduct</servlet-name>
+    <url-pattern>/OneProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Guestbook</servlet-name>
+    <url-pattern>/Guestbook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Addguest</servlet-name>
+    <url-pattern>/Addguest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddShop</servlet-name>
+    <url-pattern>/AddShop</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShopAction</servlet-name>
+    <url-pattern>/ShopAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrder</servlet-name>
+    <url-pattern>/AddOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckAction</servlet-name>
+    <url-pattern>/CheckAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CateAction</servlet-name>
+    <url-pattern>/CateAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxAction</servlet-name>
+    <url-pattern>/AjaxAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelShop</servlet-name>
+    <url-pattern>/DelShop</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxOne</servlet-name>
+    <url-pattern>/AjaxOne</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxShow</servlet-name>
+    <url-pattern>/AjaxShow</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>IndexAction</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
